@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NgajiKids Lampung | Les Ngaji Online Anak 5-12 Tahun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#d1fae5', // emerald-100
+                            DEFAULT: '#10b981', // emerald-500
+                            dark: '#047857', // emerald-700
+                            accent: '#f59e0b', // amber-500
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for specific needs like smooth scrolling */
+        html { scroll-behavior: smooth; }
+        .blob-bg {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%2310b981" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,81.1,-46.3C90.4,-33.5,96,-18,94.9,-3.1C93.8,11.8,86.1,26.1,76.5,38.8C66.9,51.5,55.5,62.6,42,70.5C28.5,78.4,12.9,83,-2.3,86.4C-17.5,89.8,-32.3,92,-45.3,85.6C-58.3,79.2,-69.5,64.2,-78.2,48.5C-86.9,32.8,-93.1,16.4,-94.1,-0.6C-95.1,-17.6,-90.9,-35.2,-80.7,-48.9C-70.5,-62.6,-54.3,-72.4,-39.2,-78.9C-24.1,-85.4,-10.1,-88.6,2.7,-93.1C15.5,-97.6,30.6,-83.6,44.7,-76.4Z" transform="translate(100 100)" /></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-book-open text-brand text-3xl mr-2"></i>
+                    <span class="font-extrabold text-2xl text-slate-800 tracking-tight">Ngaji<span class="text-brand">Kids</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-slate-600 hover:text-brand font-semibold transition">Beranda</a>
+                    <a href="#keunggulan" class="text-slate-600 hover:text-brand font-semibold transition">Keunggulan</a>
+                    <a href="#program" class="text-slate-600 hover:text-brand font-semibold transition">Program</a>
+                    <a href="#testimoni" class="text-slate-600 hover:text-brand font-semibold transition">Testimoni</a>
+                    <a href="#daftar" class="bg-brand hover:bg-brand-dark text-white px-6 py-2 rounded-full font-bold shadow-lg shadow-brand/30 transition transform hover:-translate-y-0.5">Daftar Sekarang</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 text-slate-600 font-semibold hover:bg-brand-light hover:text-brand rounded-md">Beranda</a>
+                <a href="#keunggulan" class="block px-3 py-2 text-slate-600 font-semibold hover:bg-brand-light hover:text-brand rounded-md">Keunggulan</a>
+                <a href="#program" class="block px-3 py-2 text-slate-600 font-semibold hover:bg-brand-light hover:text-brand rounded-md">Program</a>
+                <a href="#testimoni" class="block px-3 py-2 text-slate-600 font-semibold hover:bg-brand-light hover:text-brand rounded-md">Testimoni</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center md:text-left z-10">
+                    <div class="inline-block bg-brand-light text-brand-dark font-bold px-4 py-1 rounded-full text-sm mb-4">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Berbasis di Lampung • 100% Online
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
+                        Bimbing Anak Cintai <span class="text-brand">Al-Qur'an</span> Sejak Dini
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Les ngaji online interaktif dan menyenangkan untuk anak usia <strong>5 - 12 tahun</strong>. Bersama Ustadz & Ustadzah berpengalaman dari Lampung. Belajar dari rumah, bebas pilih jadwal!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#daftar" class="bg-brand-accent hover:bg-yellow-500 text-white px-8 py-3.5 rounded-full font-bold text-lg shadow-lg shadow-brand-accent/40 transition transform hover:-translate-y-1 text-center">
+                            Mulai Kelas Percobaan
+                        </a>
+                        <a href="#program" class="bg-white border-2 border-slate-200 hover:border-brand hover:text-brand text-slate-600 px-8 py-3.5 rounded-full font-bold text-lg transition text-center">
+                            Lihat Program
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center justify-center md:justify-start space-x-4">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/10b981/white?text=A" alt="Student">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/f59e0b/white?text=B" alt="Student">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://placehold.co/100x100/3b82f6/white?text=C" alt="Student">
+                        </div>
+                        <div class="text-sm text-slate-600 font-semibold">
+                            Dipercaya oleh <span class="text-brand">500+</span> Orang Tua
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative w-full h-full min-h-[300px] md:min-h-[400px] flex justify-center items-center">
+                    <div class="absolute inset-0 blob-bg opacity-20 transform scale-110"></div>
+                    <img src="https://placehold.co/600x500/10b981/ffffff?text=Ilustrasi+Anak+Mengaji" alt="Anak Mengaji" class="relative z-10 rounded-3xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500 border-8 border-white">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-4 -left-4 md:-left-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-20 animate-bounce">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-brand-light p-2 rounded-full text-brand">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold">Rating Tutor</p>
+                                <p class="text-sm font-extrabold text-slate-800">4.9/5.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider mb-2">Mengapa Memilih Kami?</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Belajar Mengaji Jadi Lebih Menyenangkan</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto">Kami merancang metode khusus yang sesuai dengan psikologi anak usia 5-12 tahun agar mereka tidak mudah bosan dan mencintai Al-Qur'an.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-light text-brand rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Metode Fun Learning</h4>
+                    <p class="text-slate-600">Belajar menggunakan media visual, kuis interaktif, dan pendekatan bercerita yang disukai anak-anak.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-yellow-100 text-brand-accent rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Tutor Ramah & Sabar</h4>
+                    <p class="text-slate-600">Ustadz/Ustadzah muda dari Lampung yang telah diseleksi ketat, berpengalaman mengajar anak, dan bersertifikasi.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Jadwal Sangat Fleksibel</h4>
+                    <p class="text-slate-600">Ayah Bunda bebas menentukan jadwal ngaji anak. Bisa pagi, siang, atau malam setelah sekolah, cukup via Zoom/Google Meet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider mb-2">Program Pilihan</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Kelas Sesuai Kemampuan Anak</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 bg-brand text-white px-4 py-1 rounded-bl-xl font-bold text-sm">Usia 5-7 Thn</div>
+                    <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Kelas Iqra</h4>
+                    <p class="text-slate-500 mb-6 text-sm">Untuk pemula yang baru mengenal huruf hijaiyah.</p>
+                    <div class="text-brand font-black text-3xl mb-6">Rp 150rb<span class="text-base text-slate-500 font-normal"> / bulan</span></div>
+                    
+                    <ul class="space-y-3 mb-8 flex-grow text-slate-600 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Pengenalan Huruf Hijaiyah</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Makharijul Huruf Dasar</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> 4x Pertemuan (1 Bulan)</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Privat 1 Guru 1 Murid</li>
+                    </ul>
+                    <a href="#daftar" class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-800 font-bold py-3 rounded-xl transition">Pilih Kelas</a>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl border-2 border-brand relative overflow-hidden flex flex-col transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white px-4 py-1 rounded-bl-xl font-bold text-sm">Terpopuler (Usia 8-12 Thn)</div>
+                    <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Tahsin & Al-Qur'an</h4>
+                    <p class="text-slate-500 mb-6 text-sm">Memperbaiki bacaan dan mulai membaca Al-Qur'an dengan tartil.</p>
+                    <div class="text-brand font-black text-3xl mb-6">Rp 200rb<span class="text-base text-slate-500 font-normal"> / bulan</span></div>
+                    
+                    <ul class="space-y-3 mb-8 flex-grow text-slate-600 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Ilmu Tajwid Praktis</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Kelancaran Membaca</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Adab Membaca Al-Qur'an</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> 4x Pertemuan (1 Bulan)</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Privat 1 Guru 1 Murid</li>
+                    </ul>
+                    <a href="#daftar" class="block w-full text-center bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-xl transition shadow-lg shadow-brand/40">Pilih Kelas</a>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-xl font-bold text-sm">Usia 7-12 Thn</div>
+                    <h4 class="text-2xl font-extrabold text-slate-900 mb-2">Tahfidz Anak</h4>
+                    <p class="text-slate-500 mb-6 text-sm">Fokus hafalan surat-surat pendek (Juz 30) & doa harian.</p>
+                    <div class="text-brand font-black text-3xl mb-6">Rp 250rb<span class="text-base text-slate-500 font-normal"> / bulan</span></div>
+                    
+                    <ul class="space-y-3 mb-8 flex-grow text-slate-600 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Hafalan Juz Amma</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Hafalan Doa Sehari-hari</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Setoran & Murojaah Terjadwal</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> 8x Pertemuan (1 Bulan)</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand mt-1 mr-2"></i> Privat 1 Guru 1 Murid</li>
+                    </ul>
+                    <a href="#daftar" class="block w-full text-center bg-slate-100 hover:bg-brand hover:text-white text-slate-800 font-bold py-3 rounded-xl transition">Pilih Kelas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand font-bold uppercase tracking-wider mb-2">Kata Mereka</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Apa Kata Ayah & Bunda di Lampung?</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-brand-light/30 p-6 rounded-3xl relative">
+                    <i class="fas fa-quote-left text-4xl text-brand/20 absolute top-4 left-4 z-0"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-brand-accent mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"Alhamdulillah sejak les di sini, anak saya (Rafi, 7 thn) nggak pernah malas lagi kalau disuruh ngaji. Ustadznya pinter banget ambil hati anak. Kebetulan kami domisili Bandar Lampung, jadi nyambung banget."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">BD</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Bunda Dian</h5>
+                                <p class="text-xs text-slate-500">Way Halim, Bandar Lampung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-light/30 p-6 rounded-3xl relative">
+                    <i class="fas fa-quote-left text-4xl text-brand/20 absolute top-4 left-4 z-0"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-brand-accent mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"Awalnya ragu les online untuk anak 5 tahun, takut nggak fokus. Ternyata materinya diselingi games dan gambar menarik. Kakak tutornya sabar luar biasa. Terima kasih NgajiKids!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">AR</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Ayah Rendi</h5>
+                                <p class="text-xs text-slate-500">Natar, Lampung Selatan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-light/30 p-6 rounded-3xl relative hidden lg:block">
+                    <i class="fas fa-quote-left text-4xl text-brand/20 absolute top-4 left-4 z-0"></i>
+                    <div class="relative z-10">
+                        <div class="flex text-brand-accent mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 mb-6 italic">"Jadwalnya sangat membantu bagi saya yang bekerja. Kalau pulang telat, jadwal bisa disesuaikan. Progres hafalan anak saya juga dilaporkan tiap minggu secara rapi."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-500">IS</div>
+                            <div>
+                                <h5 class="font-bold text-slate-900">Ibu Sarah</h5>
+                                <p class="text-xs text-slate-500">Metro, Lampung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="daftar" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-brand-accent opacity-20 rounded-full blur-2xl"></div>
+                
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 relative z-10">Siap Memulai Perjalanan Ngaji Si Kecil?</h2>
+                <p class="text-brand-light text-lg mb-8 max-w-2xl mx-auto relative z-10">Daftar sekarang dan dapatkan <strong>FREE TRIAL 1x Pertemuan</strong>. Klik tombol di bawah ini untuk konsultasi dengan admin kami via WhatsApp.</p>
+                
+                <button onclick="window.open('https://wa.me/6285727034612?text=Halo%20Admin%20NgajiKids%20Lampung,%20saya%20ingin%20tanya-tanya%20program%20les%20ngaji%20online%20untuk%20anak%20saya.', '_blank')" class="relative z-10 bg-white text-brand px-8 py-4 rounded-full font-extrabold text-lg shadow-lg hover:bg-brand-light transition flex items-center justify-center mx-auto gap-3">
+                    <i class="fab fa-whatsapp text-2xl text-green-500"></i> Hubungi via WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-book-open text-brand text-2xl mr-2"></i>
+                        <span class="font-extrabold text-xl text-white tracking-tight">Ngaji<span class="text-brand">Kids</span> Lampung</span>
+                    </div>
+                    <p class="text-sm mb-4">Lembaga pendidikan Al-Qur'an online terpercaya dari Lampung, mendedikasikan diri untuk mencetak generasi Qur'ani sejak dini dengan metode yang ceria.</p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Tautan Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-brand transition">Beranda</a></li>
+                        <li><a href="#keunggulan" class="hover:text-brand transition">Mengapa Kami?</a></li>
+                        <li><a href="#program" class="hover:text-brand transition">Program & Biaya</a></li>
+                        <li><a href="#testimoni" class="hover:text-brand transition">Testimoni Wali Santri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Kontak Kami</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-brand"></i>
+                            <span>Bandar Lampung, Lampung, Indonesia (Layanan 100% Online)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-brand"></i>
+                            <span>0857-2703-4612 (WhatsApp Only)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-instagram mr-3 text-brand"></i>
+                            <span>@ngajikids.lampung</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 text-sm text-center">
+                <p>&copy; 2023 NgajiKids Lampung. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk generasi penerus bangsa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
